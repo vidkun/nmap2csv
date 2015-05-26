@@ -73,9 +73,9 @@ class Parser < ::Ox::Sax
     puts "Processing Host: #{@host[:ip_address]}"
 
     # build our csv lines and output to user
-    @ports.each do |port|
-      puts "#{@host[:ip_address]},#{port[:portid]}/#{port[:protocol]},#{port[:name]},#{port[:state]},#{port[:reason]}" #.split(',')
-    end
+    # @ports.each do |port|
+    #   puts "#{@host[:ip_address]},#{port[:portid]}/#{port[:protocol]},#{port[:name]},#{port[:state]},#{port[:reason]}" #.split(',')
+    # end
 
     # build filename for this host's results file
     filename = @host[:ip_address] + "_" + Time.parse(@scan_time).strftime("%Y%m%d@%H%M") + ".csv"
